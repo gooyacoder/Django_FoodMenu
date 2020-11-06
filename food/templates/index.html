@@ -1,0 +1,28 @@
+
+
+
+
+
+{% extends 'includes/base.html' %}
+
+{% block content %}
+
+<div class="container">
+	<br>
+	<div class="w-25 p-3">
+		{% for item in items %}
+
+			<ul class="list-group">
+				<li class="list-group-item bg-light">
+					{{item.item_name}} : ${{item.item_price}}
+				</li>
+			</ul>
+
+		{% endfor %}
+	</div>
+
+</div>
+
+
+
+{% endblock %}
