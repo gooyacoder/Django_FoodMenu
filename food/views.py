@@ -8,5 +8,7 @@ def index(request):
 	items = Item.objects.all()
 	return render(request, 'index.html', {'items': items,})
 
-def detail(request, item_id):
-	return HttpResponse('This is the item no/id: %s' % item_id)
+def details(request, item_id):
+	item = Item.objects.get(pk=item_id)
+	context = { 'item' : item }
+	return render(request, 'details.html', context)
