@@ -16,6 +16,8 @@
 			</div>
 			<div class="col-md-3">
 				<a href="{% url 'details' item.id %}" class="btn btn-success">Details</a>
+				<a href="{% url 'update_item' item.id %}" class="btn btn-warning">Edit</a>
+				<a href="{% url 'delete_item' item.id %}" class="btn btn-danger">Delete</a>
 			</div>
 		</div>
 
