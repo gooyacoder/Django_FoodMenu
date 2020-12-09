@@ -30,6 +30,14 @@
     <br>
     <div class="container">
 
+        {% if messages %}
+            <div class="alert alert-success">
+                {% for m in messages %}
+                    {{m}}
+                {% endfor %}
+            </div>
+        {% endif %}
+
         
     {% block content %}
     {% endblock %}
